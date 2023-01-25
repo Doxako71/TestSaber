@@ -28,6 +28,15 @@ namespace StarterAssets
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
         
+        public void VirtualLMBInput(bool virtualLMBIState)
+        {
+            starterAssetsInputs.LMBInput(virtualLMBIState);
+        }
+        
+        public void VirtualRMBInput(bool virtualRMBState)
+        {
+            starterAssetsInputs.RMBInput(virtualRMBState);
+        }
     }
 
 }

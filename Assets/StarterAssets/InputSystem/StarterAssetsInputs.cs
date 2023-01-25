@@ -12,6 +12,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool lmb;
+		public bool rmb;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +45,16 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnLMB(InputValue value)
+		{
+			LMBInput(value.isPressed);
+		}
+
+		public void OnRMB(InputValue value)
+		{
+			RMBInput(value.isPressed);
+		}
 #endif
 
 
@@ -64,6 +76,16 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void LMBInput(bool newLMBState)
+		{
+			lmb = newLMBState;
+		}
+
+		public void RMBInput(bool newRMBState)
+		{
+			rmb = newRMBState;
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)
