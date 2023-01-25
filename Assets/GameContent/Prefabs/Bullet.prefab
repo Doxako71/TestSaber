@@ -101,7 +101,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f4d4e517974204b58603f578fb291c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flySpeed: 35
+  _flySpeed: 25
   _deathTime: 5
   _groundLayers:
     serializedVersion: 2
@@ -145,7 +145,17 @@ PrefabInstance:
     - target: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 141433446842962273, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 141433446842962273, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
         type: 3}
@@ -240,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 8122789944495389005, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

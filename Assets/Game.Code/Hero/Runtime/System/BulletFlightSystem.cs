@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UniRx.Triggers;
+using UnityEngine;
 
 namespace Game.Code.Hero.Runtime.System
 {
@@ -29,9 +31,15 @@ namespace Game.Code.Hero.Runtime.System
 
         private void Death()
         {
-            _fx.Play();
-            _fx.transform.parent = null;
             Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            _fx.transform.parent = null;
+            _fx.GetComponent<ClearParticleSystem>().enabled = true;
+            _fx.GetComponent<ObservableUpdateTrigger>().enabled = true;
+            _fx.Play();
         }
     }
 }
